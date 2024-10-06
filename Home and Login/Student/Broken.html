@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="mainScript.js"></script>
+    <link rel="stylesheet" href="Broken.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <title>Report an Issue</title>
+</head>
+
+<body>
+        <!-- Main Content -->
+    <div class="main-content">
+        <div class="report-container">
+            <h1>Report an Issue</h1>
+            <p class="description">Use this form to report any issues you're facing with the system.</p>
+
+            <!-- Report Form -->
+            <form id="report-form" action="submit-report.php" method="POST">
+                <div class="form-group">
+                    <label for="issue-category">Issue Category</label>
+                    <select id="issue-category" name="issue-category" required>
+                        <option value="">Select an issue</option>
+                        <option value="system-bug">System Bug</option>
+                        <option value="interface-error">Interface Error</option>
+                        <option value="performance-issue">Performance Issue</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="issue-details">Issue Details</label>
+                    <textarea id="issue-details" name="issue-details" rows="5" required placeholder="Describe the issue..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Submit</button>
+            </form>
+
+            <div class="back-dashboard">
+                <a href="dashboard.php" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Dashboard</a>
+            </div>
+        </div>
+
+        <!-- FAQs Section -->
+        <div class="faq-container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>How do I reset my password?</h3>
+                <p>Go to account settings and select "Change Password".</p>
+            </div>
+            <div class="faq-item">
+                <h3>Why is my requisition not showing?</h3>
+                <p>Ensure your requisition was submitted correctly. If the issue persists, contact support.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What should I do if I encounter a system error?</h3>
+                <p>Use the form above to submit the issue, and our team will investigate promptly.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

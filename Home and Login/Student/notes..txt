@@ -1,0 +1,70 @@
+                <div class="description-section">
+                <h4>Comments: </h4>
+            <?php
+                // Database connection (ensure config.php contains your database connection settings)
+                require_once("config.php");
+
+                // Establish the connection
+                $mysqli = new mysqli(SERVER, USERNAME, PASSWORD, DATABASE);
+
+                // Check for connection errors
+                if ($mysqli->connect_error) {
+                    die("Connection failed: " . $mysqli->connect_error);
+                }
+
+                // Prepare the SQL query
+                $sql = "SELECT Username, role, content 
+                        FROM comments 
+                        JOIN users ON users.UserID = comments.comment_user_id
+                        Where comments.comment_ticket_id = ?;";
+
+                // Prepare the statement
+                if ($stmt = $mysqli->prepare($sql)) {
+                    $stmt->bind_param("i", $ticketID);
+                    // Execute the statement
+                    $stmt->execute();
+                    
+                    // Get the result set
+                    $result = $stmt->get_result();
+
+                    // Check if there are results
+                    if ($result->num_rows > 0) {
+                        // Loop through the results and display them
+                        while ($row = $result->fetch_assoc()) {
+                            echo '<div class="comment-box">';
+                            echo '<p><strong>' . htmlspecialchars($row['Username']) . ' (' . htmlspecialchars($row['role']) . ')</strong></p>';
+                            echo '<p>' . htmlspecialchars($row['content']) . '</p>';
+                            echo '</div>';}
+                    } else {
+                        echo "<p>No comments found.</";
+                    }
+
+                    // Close the statement
+                    $stmt->close();
+                } else {
+                    echo "Query preparation failed: " . $mysqli->error;
+                }
+
+                // Close the database connection
+                $mysqli->close();
+                ?>
+
+            </div>
+
+
+
+                <div id="comment-form" class="description-section" style="display: none;">
+                    <form action="../addcomment.php?id=<?php echo $ticketID; ?>" method="POST">
+                    <textarea  class="description-textarea" id="new-comment" name="comment" placeholder="Enter your comment..."></textarea><br><br>
+                    <button id="submit-comment-btn" class="secondary">Submit</button>
+                    </form>
+                </div><br><br><br><br><br>
+                <?php
+            // Check if the comment was successfully added
+            if (isset($_GET['success']) && $_GET['success'] == '1') {
+                echo "<script>alert('Comment added successfully.');</script>";
+                
+            }?>
+
+          
+            </div>

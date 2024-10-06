@@ -1,0 +1,179 @@
+        /* CSS Variables */
+        :root {
+            --primary-bg-color: black; /* Primary background color */
+            --primary-text-color: white; /* Primary text color */
+            --secondary-bg-color: whitesmoke; /* Secondary background color */
+            --highlight-color: #ddd; /* Highlight color for links and text */
+            --font-family: "Roboto", sans-serif; /* Default font family */
+        }
+
+        /* Body Styling */
+        body {
+            font-family: var(--font-family); /* Use default font family */
+            margin: 0; /* Remove default margin */
+            padding: 80px 20px 20px; /* Padding for body content */
+            background-color: var(--secondary-bg-color); /* Background color */
+            display: flex; /* Flexbox for centering content */
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            min-height: 100vh; /* Minimum height to cover full viewport */
+            padding-top: 70px; /* Adjust padding for fixed header */
+            padding-bottom: 70px; /* Adjust padding for fixed footer */
+            color: dimgrey;
+        }
+
+        /* General Link Styling */
+        a {
+            color: var(--highlight-color); /* Set link color */
+            font-size: medium; /* Font size for links */
+        }
+
+        /* Header Section */
+        .help-header {
+            background-color: var(--primary-bg-color); /* Header background color */
+            color: var(--primary-text-color); /* Header text color */
+            display: flex; /* Flexbox for horizontal alignment */
+            justify-content: space-between; /* Space between child elements */
+            align-items: center; /* Center items vertically */
+            padding: 0rem 5%;/* Padding for inner spacing */
+            position: fixed; /* Fixed header at the top */
+            top: 0; /* Position at the very top */
+            left: 0; /* Align to the left edge */
+            right: 0; /* Align to the right edge */
+            z-index: 1000; /* Ensure header stays on top */
+            display: inline-flex;
+        }
+
+        /* Home Section */
+        .home {
+            position: absolute; /* Absolute positioning within the header */
+            top: 0; /* Align to the top */
+            right: 10%; /* Align to the right with some space */
+            color: var(--highlight-color); /* Set text color */
+        }
+
+        /* Container for Help Blocks */
+        .container {
+            display: flex; /* Flexbox for horizontal layout */
+            justify-content: space-between; /* Space between help blocks */
+            max-width: 1200px; /* Max width for large screens */
+        }
+
+        /* Styling for Each Help Block */
+        .help-block {
+            background-color: #fff; /* White background for blocks */
+            border: 1px solid #ddd; /* Border for blocks */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Inner padding */
+            margin: 10px; /* Outer margin */
+            flex: 1; /* Flex-grow to fill space */
+        }
+
+        .help-block img {
+            width: 70px; /* Reduce the image width */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 10px; /* Space between image and text */
+        }
+
+        /* Help Block Headings */
+        .help-block h2 {
+            margin-top: 0; /* Remove default margin */
+        }
+
+        /* Responsive Styling for Smaller Screens */
+        @media (max-width: 768px) {
+            .help-header,
+            footer {
+                height: 60px; /* Adjust header and footer height */
+            }
+
+            body {
+                padding-top: 60px; /* Adjust padding for smaller screens */
+                padding-bottom: 60px; /* Adjust padding for smaller screens */
+            }
+
+            .container {
+                flex-direction: column; /* Stack help blocks vertically */
+            }
+        }
+
+        /* Submit Button Styling */
+        .help-block input[type="submit"] {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .help-block input[type="submit"]:hover {
+            background-color:#f8d4fd;
+        }
+
+        
+
+        /* Header Panel and Navigation */
+        .header-panel {
+            display: flex; /* Flexbox for horizontal layout */
+            align-items: center; /* Center items vertically */
+            margin-left: 20px; /* Margin for spacing */
+        }
+
+        .navigation {
+            list-style: none; /* Remove default list styling */
+            display: flex; /* Flexbox for horizontal layout */
+            align-items: center; /* Center items vertically */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        .navigation li {
+            margin-left: 20px; /* Space between items */
+        }
+
+
+        
+        /* Footer Section */
+        footer {
+            display: flex; /* Flexbox for horizontal layout */
+            justify-content: space-between; /* Distribute space between footer elements */
+            align-items: left; /* Center items vertically */
+            flex-wrap: wrap; /* Allow elements to wrap to the next line if needed */
+            padding: 0rem; /* Padding for footer content */
+            background-color: var(--primary-bg-color); /* Background color */
+            color: var(--primary-text-color); /* Text color */
+            width: 100%; /* Full width of the viewport */
+            position: fixed; /* Fixed at the bottom of the viewport */
+            bottom: 0; /* Align to the bottom */
+            left: 0; /* Align to the left */
+            right: 0; /* Align to the right */
+            z-index: 999; /* Ensure footer stays on top */
+            padding-left: 6%; /* Padding for inner content */
+            padding-right: 6%; /* Margin top */
+        }
+        footer p {
+            font-size: 1rem;
+            color: whitesmoke; 
+            font-family: "Roboto", sans-serif;
+            font-weight: 200;
+            font-style: normal;
+            text-align: left;
+            margin-top: rem;
+          }
+
+        /* Responsive Footer Styling */
+        @media (max-width: 768px) {
+            footer {
+                padding: 1rem;
+                text-align: center; /* Center align footer content */
+            }
+        }
+
+        
+
+        
+
+        
+
+  

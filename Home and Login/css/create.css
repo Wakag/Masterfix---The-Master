@@ -1,0 +1,180 @@
+body {
+  background-image: url(rhodes.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+}
+
+
+
+.login-container {
+  background-color: rgba(0, 0, 0, 0.75);
+  max-width: 600px; /* Adjust as needed */
+  margin: 150px auto 0; /* Add top margin for spacing */
+  padding: 20px;
+  border: none; /* Border for the container */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Center text */
+  align-items: center; /* Center items horizontally */
+}
+.sign-in-container {
+  background-color: rgba(0, 0, 0, 0.75);
+  max-width: 600px; /* Adjust as needed */
+  margin: 40px auto 0; /* Add top margin for spacing */
+  padding: 20px;
+  border: none; /* Border for the container */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Center text */
+  align-items: center; /* Center items horizontally */
+}
+.logo {
+  width: 150px; /* Adjust the width as needed */
+  height: 150px; /* Adjust the height as needed */
+  margin: 20px; /* Space around the logo */
+  background-color: #f0f0f0; /* Background color for the logo area */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+
+}
+/* Form group */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  color: white;
+  margin-bottom: 5px;
+}
+.log1, select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.log1:focus, select:focus {
+  outline: none;
+  border: 2px solid #f39c12;
+}
+
+
+/* Help link */
+.help {
+  display: block;
+  color: white;
+  margin-top: 15px;
+}
+
+.custom-button {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px; /* Font size */
+  font-weight: bold;
+  grid-column: span 2; /* Make button span both columns */
+  padding: 10px;
+  background-color: #f8d4fd; /* Button color */
+  color: black; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 5em; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s  ease; /* Smooth color transition */
+}
+
+.custom-button:hover {
+  background-color: #FEF7FF; /* Darker blue on hover */
+}
+
+.custom-button:active {
+  background-color: #a29bfe; /* Even darker blue when clicked */
+}
+
+.custom-button:focus {
+  outline: none; /* Remove the default outline */
+  box-shadow: 0 0 0 3px rgba(226, 209, 253, 0.5); /* Add a focus shadow */
+}
+
+
+/* The rest of your styles remain unchanged */
+
+
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px; /* Adjust title size */
+  margin-bottom: 20px; /* Space below title */
+  color: #f0f0f0;
+}
+
+form {
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  text-align: left;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 15px; /* Space between form fields */
+}
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.form-group {
+  display: flex;
+  flex-direction: column; /* Stack label and input */
+}
+
+.log1 {
+  font-family: "Roboto", sans-serif;
+  padding: 10px; /* Padding for input fields */
+  border: 1px solid #ccc; /* Border for input fields */
+  border-radius: 5px; /* Rounded corners */
+  width: 100%; /* Ensure full width within the column */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+
+
+.help {
+  font-family: "Roboto", sans-serif;
+  display: block;
+  margin-top: 10px; /* Space above help link */
+  color: #f8d4fd; /* Help link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.help:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/**********************Footer***************************/ 
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0rem 7% 0rem;
+    background: black;
+    text-align: center;
+    background-color: black;
+    color: white;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  footer p {
+    font-size: 1rem;
+    color: whitesmoke; 
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    text-align: left;
+    margin-top: rem;
+  }

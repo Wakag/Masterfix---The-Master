@@ -1,0 +1,105 @@
+/* Apply box-sizing and font-family to all elements within .form-container */
+.form-container * {
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    font-family: Inter, sans-serif; /* Set the font family to Inter, fallback to sans-serif */
+}
+
+/* Center the form container */
+.form-container {
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    margin-top: 30px;
+    
+}
+
+/* Style the form content */
+.form-container .form-content {
+    padding: 20px; /* Add padding inside the form content */
+    width: 65%; /* Set the width to 65% of the container */
+    background: #fff; /* Set background color to white */
+    border-radius: 8px; /* Round the corners */
+    position: relative; /* Set position to relative */
+}
+
+/* Style the form title */
+.form-container .title {
+    text-align: center; /* Center the text */
+    font-size: 20px; /* Set font size to 20px */
+    color: #1E1E1E; /* Set text color to dark gray */
+    margin-bottom: 7%; /* Add bottom margin */
+}
+
+/* Style the form group */
+.form-container .form-group {
+    display: flex; /* Use flexbox layout */
+    gap: 8%; /* Add gap between elements */
+}
+
+/* Style the labels */
+.form-container label {
+    display: block; /* Display as block element */
+    color: #1E1E1E; /* Set text color to dark gray */
+    font-size: 12px; /* Set font size to 12px */
+    margin-bottom: 5px; /* Add bottom margin */
+}
+
+/* Add margin-top to full-width labels */
+.full-width label {
+    margin-top: 3%; /* Add top margin */
+}
+
+/* Style the input, select, and textarea elements */
+.form-container input[type="text"], 
+.form-container input[type="file"], 
+.form-container select, 
+.form-container textarea {
+    width: 100%; /* Set width to 100% of the container */
+    padding: 10px; /* Add padding inside the elements */
+    border: 1px solid #ccc; /* Add a light gray border */
+    border-radius: 8px; /* Round the corners */
+    font-size: 12px; /* Set font size to 12px */
+}
+
+/* Style the half-width elements */
+.form-container .half-width {
+    width: 25%; /* Set the width to 25% of the container */
+}
+
+/* Style the buttons */
+.form-container button {
+    width: 17%; /* Set the width to 17% of the container */
+    padding: 10px; /* Add padding inside the button */
+    margin-top: 2%; /* Add top margin */
+    background-color: #65558F; /* Set background color */
+    color: white; /* Set text color to white */
+    text-align: center; /* Center the text */
+    border-radius: 100px; /* Round the corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Add transition effect for background color */
+}
+
+/* Hover effect for submit button */
+.form-container button:hover {
+    background-color: rgb(200, 166, 255); /* Change background color on hover */
+}
+
+/* Style the upload section */
+.form-container .upload-section {
+    width: 25%; /* Set the width to 25% of the container */
+}
+
+/* Style the button container */
+.form-container .button-container {
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Distribute space between buttons */
+    margin-top: 20px; /* Add top margin */
+}
+
+/* Style the description textarea */
+#description {
+    height: 100px; /* Set height to 4.5em */
+    overflow-y: auto; /* Add vertical scroll if content exceeds height */
+}

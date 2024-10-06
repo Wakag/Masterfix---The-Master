@@ -1,0 +1,109 @@
+/* Buttons styling */
+.segmented-buttons {
+    width: fit-content; /* Adjusts the width of the container to fit its children */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 240px;            
+    display: flex;
+    border-radius: 16px; /* Rounded corners for the container */
+    padding-bottom: 5px;
+}
+.segment-btn {
+    width: 120px; /* Set the width of the button */
+    display: flex; /* Make the button a flex container */
+    justify-content: center; /* Center the text horizontally */
+    background-color: #E8DEF8; /*#F3E5F5 Background color */
+    color: #1D1B20; /* Text color */
+    font-weight: 700;
+    white-space: nowrap; /* Prevent text wrapping */
+    border: 0.1px solid #79747E; /* Add border to each button */
+    padding: 8px 16px; /* Padding */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    
+}
+.segment-btn.left {
+    border-radius: 16px 0 0 16px; /* Rounded corners on the left button */
+}
+.segment-btn.right {
+    border-radius: 0 16px 16px 0; /* Rounded corners on the right button */  
+}
+.segment-btn:hover, .segment-btn.active {
+    background-color:#4a396b; /* Background color for hover/active state */
+    color: #FFFFFF; /* Text color for hover/active state */
+}
+/* Tickets list styling */
+
+.tickets-list {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  padding-right: 15px;  
+  margin: 0 auto; /* Center the tickets-list if it has a fixed width */
+  }
+.ticket-separator {
+  height: 1px;
+  background-color: #E0E0E0; /* Light gray color for the separator */
+  margin:2px 0; /* Add space around the separator */
+}
+.ticket-item {
+  display: flex;
+  line-height: 150%;
+  align-items: center;
+  background-color: #FFFFFF;
+  padding: 1%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+.ticket-item:hover {
+  background-color: #f1f1f1; /* Change background color on hover */
+}
+.ticket-icon img {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  margin-right: 4%;
+  margin-left: 4%;
+}
+.ticket-info{
+  padding-left: 20px;
+}
+.ticket-info h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #212529;
+}
+.ticket-info p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #6C757D;
+}
+.ticket-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+/* Spinner Styling */
+.spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999; /* Make sure it's on top of other elements */
+}
+
+.spin {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #6A1B9A;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

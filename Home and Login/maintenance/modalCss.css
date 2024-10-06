@@ -1,0 +1,93 @@
+/* Full-Screen Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background for overlay effect */
+    padding: 0; /* Remove padding */
+    box-shadow: none; /* Remove box shadow */
+    border-radius: 0; /* Remove border radius */
+    z-index: 2000; /* Ensure it stays on top */
+    animation: fadeIn 0.3s ease; /* Keep the fade-in animation */
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Modal Content Container */
+.modal-content {
+    background-color: white; /* White background for content */
+    padding: 40px; /* Increased padding for larger content */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    border-radius: 12px; /* Rounded corners */
+    width: 80%; /* Responsive width */
+    max-width: 800px; /* Maximum width */
+    position: relative; /* Position relative for close button */
+    overflow-y: auto; /* Scroll if content overflows */
+    max-height: 90vh; /* Prevent modal from exceeding viewport height */
+}
+
+/* Close Button */
+.close {
+    color: #555;
+    position: absolute; /* Position relative to modal-content */
+    top: 20px;
+    right: 30px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Modal Content Headings */
+.modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Complete Button */
+.btn-complete {
+    padding: 12px 24px; /* Increased padding for better visibility */
+    background-color: #6A1B9A;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-complete:hover {
+    background-color: #4a0072;
+}
+
+/* Optional: Responsive Adjustments */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 95%; /* Almost full width on small screens */
+        padding: 20px; /* Reduced padding */
+    }
+
+    .modal-content h2 {
+        font-size: 20px;
+    }
+
+    .btn-complete {
+        width: 100%; /* Full width buttons on small screens */
+    }
+}

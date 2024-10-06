@@ -1,0 +1,80 @@
+/*Font of the h1 heading*/
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*Font of the h2 heading*/
+h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 30px;
+    text-align: left;
+    padding: 40px;
+    margin-left: 100px;
+    
+}
+.home {
+    margin: 1px;
+    padding-bottom: 20px;
+    padding-top: 5px;
+}
+
+/*CSS for the section */ 
+#team-members {
+    text-align: center;
+    padding-top: 10px;
+    margin: 10px;
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content: center; /* Use space-around for better spacing */
+}
+
+/*CSS for each team members contact detail container*/
+.team-member {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin: 160px; /* Increase margin for more spacing */
+    margin-bottom: 220px;
+    margin-top: 1px;
+    margin-left: 100px;
+    padding: 15px;
+    border: 0.1px solid #ccc;
+    border-radius: 80%;
+    width: 200px; /* Adjust width as needed */
+    height: 200px;
+    font-size: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 10px rgba(190, 35, 214, 0.2);
+    cursor: pointer;  /* Show a hand cursor on hover */
+}
+img {
+    border-radius: 80%; /* Make the image circular */
+    width: 100%; /* Make the image fill the container */
+    height: 100%; /* Make the image fill the container */
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+h3 {
+    text-align: center; /* Center text within the container */
+    margin-top: 10px;
+}
+
+p {
+    text-align: center; /* Center text within the container */
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+/*Paddding around the table*/
+table {
+    padding: 10px;
+    justify-content: space-around;
+    height: 50px;
+    width: 50px; 
+    display: table-row-group;
+    table-layout: auto;
+}
+

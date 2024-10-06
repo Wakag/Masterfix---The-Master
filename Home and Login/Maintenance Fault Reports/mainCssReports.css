@@ -1,0 +1,258 @@
+/*=========================
+         Stat Card Styles
+         ========================= */
+.stat-card {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.stat-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+}
+
+.stat-number {
+    font-size: 32px;
+    font-weight: bold;
+    color: #6A1B9A;
+}
+
+.stat-category {
+    font-size: 14px;
+    color: #888;
+}
+
+/* =========================
+         Charts Container Styles
+         ========================= */
+.charts-container {
+    width: 100%;
+    padding: 20px;
+}
+
+.charts-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+    /* Adds space between the two charts */
+}
+
+#progressChart,
+#donutchart {
+    width: 45%;
+    /* Adjusts the width of both charts */
+    height: 500px;
+}
+
+@media (max-width: 768px) {
+    .charts-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #progressChart,
+    #donutchart {
+        width: 90%;
+        /* Make the charts responsive on smaller screens */
+        height: 400px;
+    }
+
+    /* Adjust Swiper sections for smaller screens */
+    .ticket-swipers-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .swiper-container.closed-swiper,
+    .swiper-container.resolved-swiper {
+        width: 90%;
+        height: 300px;
+    }
+}
+
+/* =========================
+         Block 3 Graph Section Styles
+         ========================= */
+.block3graph-section {
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    /* Adjust width to fit the layout */
+    max-width: 1200px;
+    /* Limit the maximum width */
+    background-color: #fff;
+    /* Optional: Set background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional: Add shadow for depth */
+    border-radius: 10px;
+    /* Optional: Round corners */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .block3graph-section {
+        width: 100%;
+        /* Full width on smaller screens */
+        padding: 15px;
+    }
+}
+
+/* =========================
+         Ticket Swipers Container
+         ========================= */
+.ticket-swipers-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+    gap: 20px;
+}
+
+.swiper-container.closed-swiper,
+.swiper-container.resolved-swiper {
+    width: 48%;
+    /* Adjust for side by side */
+    height: 300px;
+    /* Adjust as needed */
+}
+
+@media (max-width: 768px) {
+
+    .swiper-container.closed-swiper,
+    .swiper-container.resolved-swiper {
+        width: 90%;
+        height: 300px;
+    }
+}
+
+/* =========================
+         Swiper Navigation Buttons Styles
+         ========================= */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #6A1B9A;
+}
+
+.swiper-pagination {
+    bottom: 10px !important;
+}
+
+/* =========================
+         Scatter Chart Section Styles
+         ========================= */
+
+/* Responsive adjustments */
+.scatter-chart-section {
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    /* Adjust width to fit the layout */
+    max-width: 1200px;
+    /* Limit the maximum width */
+    background-color: #fff;
+    /* Optional: Set background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional: Add shadow for depth */
+    border-radius: 10px;
+    /* Optional: Round corners */
+    height: 600px;
+    /* Adjust height to desired value */
+    margin: 20px auto;
+    /* Center the chart */
+}
+
+.scatter-chart-section h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #6A1B9A;
+    margin-bottom: 20px;
+}
+
+#scatterchart_maintenance_requests {
+    width: 100%;
+    max-width: 1000px;
+    /* Maximum width for larger screens */
+    margin: 0 auto;
+    /* Center the chart horizontally */
+}
+
+@media (max-width: 768px) {
+    #scatterchart_maintenance_requests {
+        width: 100%;
+        /* Full width on smaller screens */
+        padding: 15px;
+        height: 400px;
+    }
+}
+
+#scatterChartContainer {
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    /* Adjust max width for responsiveness */
+    margin: 20px auto;
+    /* Center the chart */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#scatterChartContainer,
+#otherChartContainer {
+    flex: 1 1 45%;
+    /* Adjust size and distribution */
+}
+
+/* =========================
+         Swiper Button Arrow Styles
+         ========================= */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    color: purple;
+    /* Set the arrow color to purple */
+    font-size: 24px;
+    /* Adjust size as needed */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: transparent;
+    /* Make background transparent */
+    border: none;
+    /* Remove any borders */
+    box-shadow: none;
+    /* Remove shadow if any */
+}
+
+/* Ensure the swiper-container has position relative */
+.swiper-container {
+    position: relative;
+    /* Establishes a positioning context */
+}
+
+/* Position the buttons on the edges of the Swiper section */
+.swiper-button-next {
+    right: -450px !important;
+    /* Adjust to move the button closer to the edge */
+    z-index: 10;
+    /* Ensure it's on top of other elements */
+}
+
+.swiper-button-prev {
+    left: -400px !important;
+    /* Adjust to move the button closer to the edge */
+    z-index: 10;
+    /* Ensure it's on top of other elements */
+}

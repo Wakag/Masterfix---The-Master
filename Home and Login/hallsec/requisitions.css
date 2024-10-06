@@ -1,0 +1,133 @@
+/* General styling */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F4F4F9; /* Light background for contrast */
+    overflow: hidden; /* Prevents scrolling the entire page */
+}
+.table-container {
+    margin-top: 50px;
+    max-height: 600px; /* Adjust the height as needed */
+    overflow-y: auto;
+  }
+.table {
+    margin: 20px 15px;
+    overflow: hidden; /* Ensure content doesn't overflow */
+    border-radius: 12px; /* Rounded corners for the container */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    background-color: #FFFFFF; /* White background for the table container */
+    padding-bottom: 0px; /* Remove padding at the bottom */
+    border: 1px solid #E0E0E0; /* Add a light border around the table */
+}
+
+/* Styling the table */
+.table table {
+    width: 100%;
+    border-collapse: collapse; /* Ensure borders don't overlap */
+    background-color: white;
+    table-layout: fixed; /* Ensure even column distribution */
+}
+
+/* Table header styling */
+.table th {
+    background-color: #4A148C; /* Deep purple header background */
+    color: #FFFFFF; /* White text */
+    padding: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 1px; /* Add some letter spacing for a cleaner look */
+    position:sticky;
+    top: 0;  /* Ensure it sticks to the top */
+    z-index: 2;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow to separate header from the table content */
+}
+
+/* Table row styling */
+.table tr {
+    background-color: #FFFFFF;
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+/* Alternating row colors */
+.table tr:nth-child(even) {
+    background-color: #F9F9F9; /* Light grey for alternating rows */
+}
+
+.table tr:hover {
+    background-color: #EDE7F6; /* Slightly darker grey on hover */
+    cursor: pointer; /* Show pointer on hover for interactivity */
+}
+
+/* Table data cell styling */
+.table td {
+    padding: 12px;
+    color: #333; /* Darker grey text for better readability */
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left; /* Align text to the left by default */
+    border-bottom: 1px solid #E0E0E0; /* Light grey border between rows */
+    word-wrap: break-word; /* Prevent text from overflowing */
+}
+
+/* First and last row modifications for rounded corners */
+.table tr:first-child th:first-child {
+    border-top-left-radius: 12px;
+}
+.table tr:first-child th:last-child {
+    border-top-right-radius: 12px;
+}
+.table tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+.table tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+}
+
+/* Row styling when clicked */
+.table tr:active {
+    background-color: #D1C4E9; /* Darker purple when clicked */
+}
+
+/* Center aligning text in specific columns */
+.table td {
+    text-align: center;
+}
+
+/* Table Controls */
+.table-controls {
+    display: flex;
+    justify-content: space-evenly; /* Align items to the start of the container */
+    gap: 20px; /* Add spacing between the items */
+    margin: 20px 15px 10px 15px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin-top: 2%;
+}
+.table-controls input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s ease;
+    width: 200px;
+    margin-right: 100px;
+}
+.table-controls select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s ease;
+    margin-right: 100px;
+}
+
+.table-controls select:hover {
+    border-color: #4A148C;
+}

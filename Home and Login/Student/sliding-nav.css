@@ -1,0 +1,79 @@
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: -20%; /* Hidden by default */
+    width: 12%;
+    height: 100%;
+    background-color: #fff; /* White background for a clean look */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease; /* Smooth sliding effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+.navbar a.nav-link {
+    padding: 15px 20px;
+    margin: 10px 0;
+    text-decoration: none;
+    font-size: 1.1rem; /* Larger, cleaner text */
+    border-radius: 8px;
+    color: #333; /* Dark text for better readability */
+    display: block;
+    transition: background-color 0.3s, color 0.3s ease;
+    font-family: 'Open Sans', sans-serif; /* Match the page's font family */
+}
+
+.navbar a.nav-link:hover {
+    background-color: #E8DEF8; /* Light purple hover effect */
+    color: #5E35B1; /* Darker color for hover */
+}
+
+.toggle-btn {
+    position: fixed;
+    left: 15px;
+    top: 1.5%;
+    cursor: pointer;
+    font-size: 32px;
+    z-index: 1001;
+    border-radius: 10px;
+    color: #333; /* Darker icon color for better contrast */
+    transition: background-color 0.3s, color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #E8DEF8; /* Hover color similar to the navbar */
+    color: #5E35B1; /* Hover color for the icon */
+}
+
+.main-content {
+    margin-left: 0;
+    padding: 20px;
+    transition: margin-left 0.3s ease; /* Adjust content margin when nav is open */
+}
+
+.open-navbar .navbar {
+    left: 0; /* When open, the navbar is fully visible */
+}
+
+footer {
+    margin-bottom: auto;
+    background-color: #f8f8f8; /* Light background for footer */
+    color: #333; /* Darker text */
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    border-top: 1px solid #ddd; /* Subtle border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer i {
+    margin-left: 10px;
+    font-size: 1.2rem;
+    color: #f44336; /* Red exclamation icon for attention */
+}

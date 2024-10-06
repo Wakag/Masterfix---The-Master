@@ -1,0 +1,408 @@
+body {
+  background: whitesmoke;
+}
+
+
+
+.header-panel{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0rem 5%;
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    z-index: 100;
+    transition: 1s;
+    display: inline-flex;
+    
+  }
+.header-panel ul li{
+    display: inline-flex;
+    margin: 0.3em 1em;
+  }
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    
+    }
+
+
+.right-bar {
+    display: flex;
+    justify-content: flex-end; /* Aligns the navigation to the right */
+    align-items: center;
+    flex-grow: 0.8; /* Takes up the remaining space to push the navigation to the far right */
+}
+.section-header {
+  transition: .5s ease;
+  padding: 2rem 10% ;
+  border-radius: 10rem;
+  font-size: 2rem;
+  padding: 3rem 7% 2rem;
+
+  text-align:initial;
+  color: black;
+  position: absolute;
+  
+  z-index: 10;
+}
+.home {
+  display: flex;
+  align-items: center;
+}
+.home-content h3 {
+  padding: 8rem 5%;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: .3;
+}
+  .navigation a {
+    text-decoration: none; /* Removes underline from links */
+    padding: 0.5rem 1rem; /* Adds padding around the links and button */
+    font-size: 1rem;
+    color: #f8d4fd;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-regular {
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+
+.text{
+    
+    padding: 7em;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+section {
+  min-height: 100vh;
+  
+}
+p {
+  
+  padding: 2rem 7% 2rem;
+  color: dimgrey;
+  text-align:initial;
+  
+}
+/* CSS */
+.custom-button {
+  background-color: #f8d4fd; /* Primary blue color */
+  color: black; /* White text */
+  padding: 10px 20px; /* Padding inside the button */
+  border: none; /* Remove default border */
+  border-radius: 5em; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.custom-button:hover {
+  background-color: #FEF7FF; /* Darker blue on hover */
+}
+
+.custom-button:active {
+  background-color: #a29bfe; /* Even darker blue when clicked */
+}
+
+.custom-button:focus {
+  outline: none; /* Remove the default outline */
+  box-shadow: 0 0 0 3px rgba(226, 209, 253, 0.5); /* Add a focus shadow */
+}
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #ca6fd6;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #616060;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+
+
+
+/*************** Footer Section CSS **************/
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0rem 7% 0rem;
+  background: black;
+  text-align: center;
+  background-color: black;
+  color: white;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+footer p {
+  font-size: 1rem;
+  color: whitesmoke; 
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  text-align: left;
+  margin-top: rem;
+}
+
+
+
+/* Login Forms styles */
+/* Style for the popup form */
+
+
+/* The form (hidden by default) */
+.form-popup {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid #f1f1f1;
+  z-index: 999;
+  background-color: white;
+  padding: 40px;
+  width: 400px; /* Increase width */
+  height: 450px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Form container */
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input field styling */
+select {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 10px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+
+/* Button styles inside the form */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  color: grey;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 50%;
+}
+
+.main-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  display: none; /* Hide it by default */
+  z-index: 998; /* Ensure it's above other elements */
+}
+
+
+
+/************************Profession Section*****************************************/
+.cards {
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  max-width: 820px;
+}
+
+.card--1 .card__img, .card--1 .card__img--hover {
+  background-image: url('https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+}
+
+.card--2 .card__img, .card--2 .card__img--hover {
+  background-image: url('https://images.pexels.com/photos/307008/pexels-photo-307008.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+}
+
+.card__like {
+  width: 18px;
+}
+
+.card__clock {
+  width: 15px;
+vertical-align: middle;
+  fill: #AD7D52;
+}
+.card__time {
+  font-size: 12px;
+  color: #AD7D52;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.card__clock-info {
+  float: right;
+}
+
+.card__img {
+visibility: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 235px;
+border-top-left-radius: 12px;
+border-top-right-radius: 12px;
+
+}
+
+.card__info-hover {
+  position: absolute;
+  padding: 16px;
+width: 100%;
+opacity: 0;
+top: 0;
+}
+
+.card__img--hover {
+transition: 0.2s all ease-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+position: absolute;
+  height: 235px;
+border-top-left-radius: 12px;
+border-top-right-radius: 12px;
+top: 0;
+
+}
+.card {
+margin-right: 25px;
+transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+background-color: #fff;
+  width: 33.3%;
+position: relative;
+border-radius: 12px;
+overflow: hidden;
+box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
+}
+.card:hover {
+box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
+  transform: scale(1.10, 1.10);
+}
+
+.card__info {
+z-index: 2;
+background-color: #fff;
+border-bottom-left-radius: 12px;
+border-bottom-right-radius: 12px;
+ padding: 16px 24px 24px 24px;
+}
+
+.card__category {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+color: #868686;
+}
+
+.card__title {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-family: 'Roboto Slab', serif;
+}
+
+.card__by {
+  font-size: 12px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+}
+
+.card__author {
+  font-weight: 600;
+  text-decoration: none;
+  color: #AD7D52;
+}
+
+.card:hover .card__img--hover {
+  height: 100%;
+  opacity: 0.3;
+}
+
+.card:hover .card__info {
+  background-color: transparent;
+  position: relative;
+}
+
+.card:hover .card__info-hover {
+  opacity: 1;
+}

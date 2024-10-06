@@ -1,0 +1,49 @@
+/*Font of the h1 heading*/
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*Font of the h1 heading*/
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+
+/*image and sizing for the body of the page.*/
+body {
+    background-image: url('background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/*CSS for the section  */ 
+#team-members {
+    text-align: center;
+    padding: 20px;
+}
+
+/*CSS for each team members contact detail container*/
+.team-member {
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 300px; /* Adjust width as needed */
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;  /* Show a hand cursor on hover */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h3 {
+    margin: 10px 0;
+}
+
